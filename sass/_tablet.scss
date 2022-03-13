@@ -1,0 +1,160 @@
+section{
+    position: relative;
+    top: 100px;
+    max-width: 900px;
+    margin: 0 auto;
+    .main_font_size{
+        font-size: 14px !important;
+    }
+    .title{
+        line-height: 1.2;
+    }   
+
+  }
+  
+/*------- HEADER -------*/
+header{
+    .sm_nabar{
+        height: 35px;
+        font-size: large;
+    }    
+}
+
+/*------- MAIN-0 -------*/
+.main-0{
+    .list_words, .note{
+        font-size: 13px;
+    }
+    .card123{
+        margin: -175px auto;
+    }
+    .choose_title{
+        font-size: 30px;
+        margin: 165px auto;
+    }
+    .note{
+        padding-bottom: 100px;
+    }
+}
+
+/*------- MAIN-1 -------*/
+.main-1{
+    .title{
+        line-height: 1.2;
+    }   
+    #confirm{
+        margin-right: 55px;
+    } 
+    .border_left{
+        border-left: solid 1px  lightgrey;
+    }   
+}
+/*------- MAIN-2 -------*/
+.main-2{
+    .border_left{
+        border-left: solid 1px  lightgrey;
+    }  
+}
+/*------- MAIN-3 -------*/
+.main-3{ 
+      .circle, .check{
+        font-size: 20px;
+        padding: 0 10px;
+      }
+      .check{
+          left: 80% !important;
+      }
+      .cart{
+        font-size: 10px;
+      }    
+    .platinumrot, .platinumrot2{
+        margin: 15px 3px 3px -30px;
+        width: 65%;
+        max-width: 255px;
+    }
+      .platinumrot2{
+        margin: 15px 3px 3px -10px;
+      }
+    
+    .envelope {
+        margin-top: 40px;
+        width: 80%;
+        max-width: 300px;
+    }
+    .rightbox{
+        float: right;
+        #T{
+            font-size: 30px;
+            margin-top: -10px;
+            margin-right: -10px;
+        }
+        #pm{
+            font-size: 10px;
+            line-height: 13px;
+            padding-right: 6px;
+        }
+        #M{
+            font-size: 7px;
+        }
+      }
+      .presondt{
+          margin: 35px 30px;
+          margin-right: 125px;
+          #SmFont{
+              font-size: 14px;
+          }    
+    }
+    .graybox{
+    width: 95%;
+    background-color: #e8e8e4;
+    font-size: 14px ;
+    }
+    .cardsNumber, .opt, #validateBtn, .couponText {
+        font-size: 12px;
+      }
+      #validateBtn{
+        padding: 5px 10px !important; 
+      }
+    .couponText{
+    border-radius: 30px;
+    border-color: #0d6efd;
+    }
+    .total{
+    font-size: medium;
+    margin: 0 -8px;
+    padding: 0 30px !important;
+    } 
+    .border_left{
+        border-left: solid 1px  lightgrey;
+    } 
+    .img_card{
+        width: 70%;
+    }  
+    .img_card_neosurf{
+        width: 90% !important;
+    }
+    .img_transfer{
+        width: 40% !important;
+    }
+    .img_bitcoin{
+        width: 65%;
+    }
+    .boxBtn{
+        font-size: medium !important;
+    }  
+    .spo_ssl{
+        font-size: x-small !important;
+    }
+}
+
+
+/*------- FOOTER -------*/
+footer{
+    .lion{
+        width: 40px;
+    }
+    .phone-girl{
+        width: 300px;
+    }
+}
+

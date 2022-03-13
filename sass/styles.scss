@@ -1,0 +1,11 @@
+@import "reset";
+
+@import "phone-default";
+
+@media only screen and (min-width:768px) {
+    @import "tablet";
+}/* end query */
+
+@media only screen and (min-width: 992px) {
+    @import "desktop";   
+}/* end query */    

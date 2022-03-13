@@ -1,0 +1,19 @@
+[
+    {
+        "FirstName" : "john",
+        "LastName" : "doe",
+        "CustomField" : "the best",
+        "DateOfBirth" : "1977-07-22",
+        "CorporateDateOfBirth" : "1999-07-22",
+        "AssociationDateOfBirth" : "1977-07-22",
+        "CompanyName" : "juggle",
+        "CorporateStructure" : "llc",
+        "AssociationName" : "root",
+        "email" : "john@gmail.com",
+        "PhoneNumber" : "0099393943",
+        "address" : "32 Rue de ta Paix",
+        "city" : "Ixelles",
+        "zip" : "1050",
+        "answer" : "Roamin des bois"
+    }
+]

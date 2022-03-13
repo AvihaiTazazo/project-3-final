@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project_3</title>
+    <link rel="stylesheet" href="sass/styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Satisfy&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/61feb10351.js" crossorigin="anonymous"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>        <script src="js/script.js"></script>
+        <script src="js/validation.js"></script>
+        <script src="js/pages.js"></script>
+        <script src="js/greencard&envelope.js"></script>
+        <script src="js/paramters.js"></script>
+        <script src="js/paramters.js"></script>
+        <script src="js/dataForm.json"></script>
+        <script src="js/sponsorship.json"></script>
+    </head>
+<body onload="init()">
+    <header>
+        <div class="headerSize d-flex justify-content-between fixed-top bg-white col-12">
+            <a href="" class="d-lg-none"><i class="fa-2x fas fa-bars"></i></a>
+            <a href=""><img class="logohead" width="120px" src="images/amex logo.png" alt="logo"></a>
+            <a href="" class="d-lg-none"><i class="fa-2x fas fa-ellipsis-v"></i>&nbsp; &nbsp; &nbsp; EN &#9662;</a>
+            <div class="d-none d-lg-block">
+                <div class="navi nav justify-content-end text-uppercase fw-bold">
+                    <a class="nav-link" href="#">why amex?</a>
+                    <a class="nav-link" href="#">a card for all</a>
+                    <a class="nav-link" href="#">reload your card</a>
+                    <a class="nav-link"href="#">our offers</a>
+                    <a class="nav-link" href="#">faq</a>
+                </div>
+            </div>
+        </div>
+        <div id="nabar1" class="nabar1 fixed-top col-12 ">
+            <div class="sm_nabar d-lg-none d-flex flex-wrap justify-content-around align-content-center text-white">
+                <div><i class="fa fa-user-o" aria-hidden="true"></i></div>
+                <div><i class="fa fa-map-marker text-black-50" aria-hidden="true"></i></div>
+                <div><i class="fa fa-lock text-black-50" aria-hidden="true"></i></div>
+            </div>
+            <div class="lg_nabar d-none d-lg-block d-lg-flex flex-wrap justify-content-around align-content-center text-uppercase">
+                <div class="text-white">1 &nbsp; &nbsp; Amex Card</div>
+                <div>2 &nbsp; &nbsp;Information</div>
+                <div>3 &nbsp;  &nbsp; Payment Method</div>
+            </div>
+        </div>
+        <div id="nabar2" class="nabar2 fixed-top col-12 d-none">
+            <div class="sm_nabar d-lg-none d-flex flex-wrap justify-content-around align-content-center text-white">
+                <div><i class="fa fa-user-o" aria-hidden="true"></i></div>
+                <div><i class="fa fa-map-marker text-black-50" aria-hidden="true"></i></div>
+                <div><i class="fa fa-lock text-black-50" aria-hidden="true"></i></div>
+            </div>
+            <div class="lg_nabar d-none d-lg-block d-lg-flex flex-wrap justify-content-around align-content-center text-uppercase">
+                <div class="text-white">1 &nbsp; &nbsp; Amex Card</div>
+                <div>2 &nbsp; &nbsp;Information</div>
+                <div>3 &nbsp;  &nbsp; Payment Method</div>
+            </div>
+        </div>
+        <div id="nabar3" class="nabar3 fixed-top col-12 d-none">
+            <div class="sm_nabar d-lg-none d-flex flex-wrap justify-content-around align-content-center text-white">
+                <div><i class="fa fa-user-o" aria-hidden="true"></i></div>
+                <div><i class="fa fa-map-marker text-black-50" aria-hidden="true"></i></div>
+                <div><i class="fa fa-lock text-black-50" aria-hidden="true"></i></div>
+            </div>
+            <div class="lg_nabar d-none d-lg-block d-lg-flex flex-wrap justify-content-around align-content-center text-uppercase">
+                <div class="text-white">1 &nbsp; &nbsp; Amex Card</div>
+                <div>2 &nbsp; &nbsp;Information</div>
+                <div>3 &nbsp;  &nbsp; Payment Method</div>
+            </div>
+        </div>
+    </header>
+    <section id="section_0" class="mt-5 d-none">
+        <main class="main-0">
+            <div class="col-11 position-relative pb-4 mx-auto d-block col-md-9">
+                <div class="manFemale"><img src="images/select_card_intro.jpg" class="mb-5" width="100%" alt="bg-img"></div>
+                <div class="choose_title position-absolute bottom-0 start-0 col-12 text-center">Choose Your <span class=" fw-bold">Card</span><div>&mdash;</div></div>
+            </div>
+            <div class="card123 col-12 gap-md-2 fs-5 d-flex flex-wrap justify-content-center">
+                <div class="col-8 m-3 d-flex flex-wrap justify-content-center col-md-3 mx-md-3">
+                    <div class="card_z_index position-relative" onclick="page_1()"><img src="images/platinum-card-metal_480x304.png" alt="..." width="100%"></div>
+                      <div class="display-4 card_title text-center text-uppercase fw-bold my-4 text-md-start col-12">basic ></div>
+                      <ul class="list_words d-flex flex-wrap justify-content-start p-0 l_inside">
+                        <li> No documents to provide</li>
+                        <li> Withdrawal up to €100 per day</li>
+                        <li> Embossed and Customizable Card</li>
+                        <li> IBAN/RIB included</li>
+                      </ul>                
+                </div>
+                <div class="col-8 m-3 d-flex flex-wrap justify-content-center col-md-3 mx-md-3">
+                    <div class="card_z_index position-relative" onclick="page_1()"><img src="images/amex gold.jpg" class="card_z_index" alt="..." width="100%"></div>
+                      <div class="card_title text-center text-uppercase fw-bold my-4 text-md-start col-12">Classic ></div>
+                      <ul class="list_words d-flex flex-wrap justify-content-start p-0 l_inside">
+                        <li> Individual or society</li>
+                        <li> Access to Special Offers</li>
+                        <li> Balance up to €10.000</li>
+                        <li> Reloading up to €15.000/month</li>
+                      </ul>                
+                </div>
+                <div class="col-8 m-3 d-flex flex-wrap justify-content-center col-md-3 mx-md-3">
+                    <div class="card_z_index position-relative" onclick="page_1()"><img src="images/amex blue.jpg" alt="..." width="100%"></div>
+                      <div class="card_title text-center text-uppercase fw-bold my-4 text-md-start col-12">VIP ></div>
+                      <ul class="list_words d-flex flex-wrap justify-content-start p-0 l_inside">
+                        <li> Individual or society</li>
+                        <li> Access to Special Offers</li>
+                        <li> Balance up to €25.000</li>
+                        <li> Reloading up to €50.000/month</li>
+                    </ul>                
+                </div>
+                <div class="note text-center mx-4 mb-5">Note: Depending on your country of residence, local recharge limits may apply to your card.</div>            
+            </div>
+        </main>
+    </section>
+    <section id="section_1" class="">
+        <main class="main-1">
+            <div class="d-md-flex flex-md-wrap">
+                <div class="border-bottom position-relative d-md-flex flex-md-wrap" >
+                    <div class="position-relative m-auto m-md-0 col-12 col-md-4">
+                        <div class="chime1 sticky-md-top d-flex flex-wrap justify-content-center">
+                            <div class="green_card position-relative col-11 d-none d-md-block">
+                                <img src="images/chime card for Project 3.png" alt="" width="100%">
+                                <div class="green_month_years green_month_years1 position-absolute text-white"></div>
+                                <div class="top_line top_line1 text-uppercase text-white position-absolute"></div>
+                                <div class="bottom_line bottom_line1 text-uppercase text-white position-absolute"></div>
+                            </div>
+                            <div class="badge_price position-relative col-6 col-md-8 "><img src="images/badge_price.png" alt="" width="100%"></div>
+                        </div>    
+                    </div>
+                    <div class="border_left col-12 m-auto fs-5 col-md-8">
+                        <div class="title text-center text-uppercase text-secondary text-md-start ms-md-4">PERSONAL DETAILS</div>
+                        <div class="text-dark text-center text-md-start ms-md-4">&mdash;</div>
+                        <div class="main_font_size ms-4 me-4">
+                            <div class="d-flex flex-wrap">
+                                <label class="me-3">Title</label>
+                                <div class="form-check me-2">
+                                    <input type="radio" class="form-check-input" id="Mr" name="client" value="" onclick="title_checked()" checked>
+                                    <label class="form-check-label" for="Mr">Mr</label>
+                                </div>
+                                <div class="form-check me-2">
+                                    <input type="radio" class="form-check-input" id="Mis" name="client" value="" onclick="title_checked()">
+                                    <label class="form-check-label" for="Mis">Miss</label>
+                                </div>
+                                <div class="form-check me-2">
+                                    <input type="radio" class="form-check-input" id="Corporate" name="client" value="" onclick="title_checked()">
+                                    <label class="form-check-label" for="Corporate">Corporate</label>
+                                </div> 
+                                <div class="form-check me-2">
+                                    <input type="radio" class="form-check-input" id="Association" name="client" value="" onclick="title_checked()">
+                                    <label class="form-check-label" for="Association">Association</label>
+                                </div>
+                            </div>
+                            <form class="row mt-3" id="formValidation1">
+                                <div class="mr_miss row">
+                                    <div class="mb-3 col-md-6">
+                                        <label for="FirstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="FirstName" name="firstname"  value="" oninput="MrAndMiss()">
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label for="LastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="LastName" name="lastname" value="" oninput="MrAndMiss()">
+                                    </div>    
+                                    <div class="mb-3 col-md-6">
+                                        <label for="CustomField" class="form-label">Custom Field</label>
+                                        <input type="text" class="form-control" id="CustomField" name="CustomField" value="" oninput="MrAndMiss()">
+                                    </div>    
+                                    <div class="mb-3 col-md-6">
+                                        <label for="CustomField" class="form-label">IBAN UK</label>
+                                        <div class="d-md-flex justify-content-md-between">
+                                            <div> 
+                                                <label for="uk1" class="me-2"><input type="radio" class="radio_item flag" value="" name="iban1" id="uk1" checked>
+                                                <img src="images/united-kingdom.png" class="UKpng"></label>
+                                                <label for="fra1"><input type="radio" class="radio_item flag" value="" name="iban1" id="fra1">
+                                                <img src="images/france.png" class="FRANCEpng"></label>
+                                            </div>
+                                            <div class="mb-3 mt-3 my-md-0">
+                                                <button type="button" id="add_btn" onclick="addCard()" class="btn btn-info text-white fw-bold float-md-end">ADD CARD</button>
+                                            </div>    
+                                        </div>
+                                    </div>    
+                                    <div id="sec_custom" class="mb-3 col-md-6 d-none">
+                                        <label for="CustomField" class="form-label">Custom Field</label>
+                                        <input type="text" class="form-control" id="CustomField" name="Custom Field">
+                                    </div>    
+                                    <div id="sec_iban" class="mb-3 col-md-6 d-none">
+                                        <label for="CustomField" class="form-label">IBAN UK</label>
+                                        <div class="d-md-flex justify-content-md-between">
+                                            <div> 
+                                                <label for="uk2" class="me-2"><input type="radio" class="radio_item flag" value="" name="iban2" id="uk2" checked>
+                                                <img src="images/united-kingdom.png" class="UKpng"></label>
+                                                <label for="fra2"><input type="radio" class="radio_item flag" value="" name="iban2" id="fra2">
+                                                <img src="images/france.png" class="FRANCEpng"></label>
+                                            </div>
+                                            <div class="mb-3 mt-3 my-md-0">
+                                                <button type="button" id="dlt_btn" class="btn btn-danger text-white fw-bold float-md-end" onclick="addCard(), deleteCard()">DELETE CARD</button>
+                                            </div>    
+                                        </div>
+                                    </div>    
+                                    <div class="mb-3 col-md-6">
+                                        <label for="DateOfBirth" class="form-label">Date Of Birth</label>
+                                        <input type="date" class="form-control" id="DateOfBirth" name="DateOfBirth" aria-describedby="DatelHelp">
+                                        <div id="DateHelpHelp" class="form-text">(For example: 12/31/1970)</div>
+                                    </div>     
+                                </div>
+                                <div class="corporate row">
+                                    <div class="row border-bottom">  
+                                        <div class="mb-3 col-md-6 ">
+                                            <label for="CompanyName" class="form-label">Company Name</label>
+                                            <input type="text" class="form-control" id="CompanyName" name="CompanyName" value="" oninput="Corporate_Details()">
+                                        </div>
+                                        <div class="mb-3 col-md-6 ">
+                                            <label for="CorporateStructure" class="form-label">Corporate Structure</label>
+                                            <input type="text" class="form-control" id="CorporateStructure" name="CorporateStructure" value="" oninput="Corporate_Details()">
+                                        </div>
+                                        <div id="DateValidation" class="mb-3 col-md-6">
+                                            <label for="CorporateDateOfBirth" class="form-label">Date Of Birth person in charge</label>
+                                            <input type="date" class="form-control" id="CorporateDateOfBirth" name="CorporateDateOfBirth" aria-describedby="DatelHelp">
+                                            <div id="DateHelp" class="form-text">(For example: 12/31/1970)</div>
+                                        </div>    
+                                    </div>
+                                </div>
+                                <div class="association row border-bottom">
+                                    <div class="">  
+                                        <div class="mb-3 col-md-6 ">
+                                            <label for="AssociationName" class="form-label">Association Name</label>
+                                            <input type="text" class="form-control" id="AssociationName" name="AssociationName" value="" oninput="Association_Details()">
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label for="AssociationDateOfBirth" class="form-label">Date Of Birth person in charge</label>
+                                            <input type="date" class="form-control" id="AssociationDateOfBirth" name="AssociationDateOfBirth" aria-describedby="DatelHelp">
+                                            <div id="DateHelp" class="form-text">(For example: 12/31/1970)</div>
+                                        </div>    
+                                    </div>
+                                </div>
+                                <div class="cardAccount d-none">
+                                    <div class="mb-3 mt-1 col-md-6">
+                                        <label class="mb-3 mt-4 text-uppercase" for="">card account parameters</label>
+                                        <label for="CardSelection" class="form-label">Please specify the number of cards you would like.</label>
+                                        <select class="form-select" id="CardSelection" name="CardSelection" onchange="selectCards(this)">
+                                            <option value="1" selected>1 Card</option>
+                                            <option value="2">2 Cards</option>
+                                            <option value="3">3 Cards</option>
+                                            <option value="4">4 Cards</option>
+                                            <option value="5">5 Cards</option>
+                                            <option value="6">6 Cards</option>
+                                        </select>
+                                    </div> 
+                                    <div class="form-check mb-4">
+                                        <label class="form-check-label" for="cardsCheckbox">
+                                            Customization & IBAN selection
+                                            <input class="form-check-input" type="checkbox" onclick="Customization_checkbox()" value="" id="cardsCheckbox" >
+                                        </label>
+                                    </div>
+                                    <div class="cardAccountCheck mb-4">
+                                        <div id="demo"></div>                    
+                                    </div>
+                                </div>
+                                <div class="question">
+                                    <span>
+                                        <label class="switch">
+                                            <input type="checkbox" name="confirm_1">
+                                            <span class="slider round"></span>
+                                        </label>
+                                        <div id="confirm"><label>I confirm that I have read and accepted the Legal Notice, General Terms and Conditions and Privacy Policy.</label></div>
+                                    </span><br>    
+                                </div>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+                <div class="fs-5 clearfix mb-3 mt-3 me-2 col-md-12">
+                    <a href="#"><button type="button" onclick="previous_1()" class="btn float-start">< PREVIOUS</button></a>
+                    <a href="#"><button type="button" id="continue_1" class="btn btn-primary float-end me-md-2" >CONTINUE ></button></a>
+                </div>    
+            </div>
+        </main>
+    </section>
+    <section id="section_2" class="d-none">
+        <main class="main-2">
+            <div class="d-md-flex flex-md-wrap">
+                <div class="border-bottom position-relative d-md-flex flex-md-wrap">
+                    <div class="position-relative m-auto m-md-0 col-12 col-md-4">
+                        <div class="chime1 sticky-md-top d-flex flex-wrap justify-content-center">
+                            <div class="green_card position-relative col-11 d-none d-md-block">
+                                <img src="images/chime card for Project 3.png" alt="" width="100%">
+                                <div class="green_month_years green_month_years2 position-absolute text-white"></div>
+                                <div class="top_line top_line2  text-uppercase text-white position-absolute"></div>
+                                <div class="bottom_line bottom_line2 text-uppercase text-white position-absolute"></div>
+                            </div>
+                            <div class="badge_price position-relative col-6 col-md-8 "><img src="images/badge_price.png" alt="" width="100%"></div>
+                        </div>    
+                    </div>
+                    <div class="border_left main_font_size col-12 m-auto justify-content-center fs-5 col-md-8 d-flex flex-wrap justify-content-md-start">
+                        <div class="titleD text-center text-uppercase text-secondary text-md-start ms-md-4">MY DETAILS<div class="text-dark">&mdash;</div></div>
+                        <div class="ms-4 me-4 ms-md-2">
+                            <form class="row mt-3 ms-2 ms-md-0" id="formValidation2">
+                                <div class="row border-bottom d-md-flex flex-md-wrap">
+                                    <div class="mb-3 col-md-12">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email">
+                                        <div id="EmailHelp" class="form-text">(To connect to your Customer Area)</div> 
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label for="AreaCode" class="form-label">Area Code</label>
+                                        <select class="form-select" id="AreaCode" name="AreaCode">
+                                          <option value="United Kingdom" selected>+44 (United Kingdom)</option>
+                                          <option value="France">+33 (France)</option>
+                                          <option value="Israel">+972 (Israel)</option>
+                                        </select>
+                                    </div> 
+                                    <div class="mb-3 col-md-6">
+                                        <label for="PhoneNumber" class="form-label">Phone Number</label>
+                                        <input type="text" class="form-control" id="PhoneNumber" name="PhoneNumber">
+                                        <div id="PhonelHelp" class="form-text">(To receive your PIN code)</div>     
+                                    </div>
+                                </div>
+                                <div class="border-bottom row border-bottom d-md-flex flex-md-wrap">
+                                    <label class="mb-3 mt-4" for="">RESIDENTIAL ADDRESS</label>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Search for an address" readonly>
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label for="address" class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="address" name="address" value="" oninput="address2()">
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label for="addAddress" class="form-label">Additional Address Details</label>
+                                        <input type="text" class="form-control" id="addAddress" name="addAddress">
+                                    </div>
+                                    <div class="mb-3 col-md-4">
+                                        <label for="city" class="form-label">City</label>
+                                        <input type="text" class="form-control" id="city" name="city" value="" oninput="city_zip()">
+                                    </div>
+                                    <div class="mb-3 col-md-4">
+                                        <label for="zip" class="form-label">Zip</label>
+                                        <input type="text" class="form-control" id="zip" name="zip" value="" oninput="city_zip()">
+                                    </div>
+                                    <div class="mb-3 col-md-4">
+                                        <label for="country" class="form-label">Country</label>
+                                        <select class="form-select" id="country" name="country" onchange="country2(this)">
+                                            <option value="United Kingdom" selected>United Kingdom</option>
+                                            <option value="France">France</option>
+                                            <option value="Israel">Israel</option>
+                                        </select>
+                                    </div> 
+                                </div>
+                                <div class="border-bottom mt-3 pb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" onclick="delivery_second_address()" value="" id="DeliveryAddress">
+                                        <label class="form-check-label" for="DeliveryAddress">
+                                            Delivery Address (if different)
+                                        </label>
+                                    </div>
+                                    <div class="second_address row  flex-md-wrap">
+                                        <div class="mb-3 mt-3 col-md-12">
+                                            <input type="text" class="form-control" placeholder="Search for an address" readonly>
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label for="DeliveryAddress" class="form-label">Address</label>
+                                            <input type="text" class="form-control" id="DeliveryAddress" name="DeliveryAddress" value="" >
+                                        </div>
+                                        <div class="mb-3 col-md-6">
+                                            <label for="DeliveryAddAddress" class="form-label">Additional Address Details</label>
+                                            <input type="text" class="form-control" id="DeliveryAddAddress" name="DeliveryAddAddress">
+                                        </div>
+                                        <div class="mb-3 col-md-4">
+                                            <label for="DeliveryCity" class="form-label">City</label>
+                                            <input type="text" class="form-control" id="DeliveryCity" name="DeliveryCity">
+                                        </div>
+                                        <div class="mb-3 col-md-4">
+                                            <label for="DeliveryZip" class="form-label">Zip</label>
+                                            <input type="text" class="form-control" id="DeliveryZip" name="DeliveryZip">
+                                        </div>
+                                        <div class="mb-3 col-md-4">
+                                            <label for="DeliveryCountry" class="form-label">Country</label>
+                                            <select class="form-select" id="DeliveryCountry" name="DeliveryCountry">
+                                                <option value="United Kingdom" selected>United Kingdom</option>
+                                                <option value="France">France</option>
+                                                <option value="Israel">Israel</option>
+                                            </select>
+                                        </div>     
+                                    </div>
+                                </div>
+                                <div class="mb-3 mt-3 col-md-12">
+                                    <label for="SecretQuestion" class="form-label">Secret Question</label>
+                                    <select class="form-select" id="SecretQuestion" name="SecretQuestion">
+                                        <option value="1st question" selected>What is the name of your 1st pet?</option>
+                                        <option>What is your mother's first name?</option>
+                                        <option>What is the name of your 1st school?</option>
+                                    </select>
+                                    <div id="QuestionHelp" class="form-text">To help secure your card and your account</div> 
+                                </div> 
+                                <div class="mb-3 col-md-12">
+                                    <label for="answer" class="form-label">Answer</label>
+                                    <input type="text" class="form-control" id="answer" name="answer">
+                                </div>
+                                <div id="demo2"></div>                    
+                                <div id="select_demo"></div>                    
+                                <div class="mb-3">
+                                    <div class="mb-3" id="confirm"><label>By clicking on VALIDATE i acknowledge that my AMEX card is a customized product and accept its immediate production from the approval of my order and, as such, expressly renounce to exercise my right to cancel my order pursuant to the provisions of article L.121-21-8 of the consumer code</label></div>             
+                                    <div class="question">
+                                        <span>
+                                            <label class="switch">
+                                                <input type="checkbox" name="confirm_2">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <div id="confirm"><label>I would like to receive exclusive offers from AMEX Card partners</label></div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="fs-5 clearfix mb-3 mt-3 me-2 col-md-12">
+                    <a href="#"><button type="button" onclick="previous_2()" class="btn float-start">< PREVIOUS</button></a>
+                    <a href="#"><button type="button" id="continue_2"  class="btn btn-primary float-end me-md-2">CONTINUE ></button></a>
+                </div>   
+            </div>
+        </main>
+    </section>
+    <section id="section_3" class="d-none">
+        <main class="main-3">  
+  <!-- Modal REWARD -->
+  <div class="modal-date modal fade" id="cuontdownModal" tabindex="-1" aria-labelledby="cuontdownModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="d-flex flex-wrap justify-content-center"><img src="images/Sponsorship.png" alt="" width="45%"></div>
+            <div class="d-flex flex-wrap justify-content-center orange euro5">+5&euro; </div>
+            <div class="d-flex flex-wrap justify-content-center"><strong>Ezekiel Balouka</strong> &nbsp; Invite you to discover the <strong> &nbsp; Amex Mastercard</strong></div>
+            <div class="d-flex flex-wrap justify-content-center">Complete this order and you will receive 5 Eur per card</div>
+            <div class="d-flex flex-wrap justify-content-center text-uppercase orange iorder">i order &nbsp; ></div>
+            <div class="d-flex flex-wrap justify-content-center smallfont">This offer expire in</div>
+            <div class="Countdown d-flex flex-wrap justify-content-center smallfont m-2">
+                <div class="d-flex flex-column justify-content-center"><span class="orange_box Days"></span><span class="text-center">Days</span>
+                </div>
+                <div class="d-flex flex-column justify-content-center"><span class="orange_box Hours"></span><span class="text-center">Hours</span>
+                </div>
+                <div class="d-flex flex-column justify-content-center"><span class="orange_box Minutes"></span><span class="text-center">Minutes</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal EXPIRED -->
+  <div class="modal-date modal fade" id="expiredModal" tabindex="-1" aria-labelledby="expiredModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="d-flex flex-wrap justify-content-center"><img src="images/Sponsorship.png" alt="" width="45%"></div>
+            <div class="d-flex flex-wrap justify-content-center orange euro5">+5&euro; </div>
+            <div class="d-flex flex-wrap justify-content-center">This offer has expired but you can buy an AMEX card</div>
+            <div class="d-flex flex-wrap justify-content-center text-uppercase orange iorder">i order &nbsp; ></div>
+            <div class="d-flex flex-wrap justify-content-center smallfont">This offer has expired</div>
+        </div>
+      </div>
+    </div>
+  </div>
+            <div class="d-md-flex flex-md-wrap">
+                <div class="border-bottom d-md-flex flex-md-wrap">
+                    <div class="col-12 col-md-6 col-lg-7">
+                        <div class="title2 text-center text-secondary m-3 text-md-start ms-md-4 text-uppercase d-md-none">payment mode<div class="text-dark">&mdash;</div></div>
+                        <div class="d-flex flex-wrap justify-content-center position-relative">
+                            <div class="col-6">
+                                <div id="numberCircle" class="circle position-absolute my-4 mx-5 my-md-0">1</div>
+                                <img src="images/chime card for Project 3.png" width="100%" alt="" class="platinumrot">
+                                <img src="images/chime card for Project 3.png" width="100%" alt="" class="platinumrot2">
+                            </div>
+                            <div class="envelope col-12 p-2">
+                                <div class="rightbox">
+                                    <div id="T">T</div>
+                                    <div id="pm">Priority Mail</div>
+                                    <div id="M">M 20 g</div>      
+                                </div>
+                                <div class="presondt">
+                                    <div id="SmFont" class="envelope_top_line text-capitalize"></div>
+                                    <div id="SmFont" class="address3 text-capitalize"></div>
+                                    <div id="SmFont" class="city_zip text-capitalize"></div>
+                                    <div id="SmFont" class="country3 text-capitalize"></div>
+                                </div>
+                            </div>
+                            <div class="col-11 d-flex flex-wrap justify-content-center position-relative">
+                                <div class="graybox mt-5 mb-4 p-4 pb-0 rounded-3 position-relative p-md-2 pb-md-0">
+                                    <div class="check position-absolute mx-5">&#10003;</div>
+                                    <div class="blue1 m-3 p-4 rounded-3">
+                                        <div>&#10003; &nbsp; Card type: BASIC Mastercard International</div>
+                                        <div>&#10003; &nbsp; Currency: EUR</div>
+                                        <div>&#10003; &nbsp; IBAN: UK</div>                      
+                                    </div>
+                                    <div class="cart position-absolute"><i class="fas fa-shopping-cart"></i></div>
+                                    <div class="blue1 cardsNumber m-3 mt-4 p-4 rounded-3 p-md-3">
+                                        <div class="eight d-flex flex-wrap justify-content-between">
+                                            <div class="ms-3 upgrade8">Fixed (upgrade corporate)</div> 
+                                            <div class="upgradeVal">8 &euro; </div>
+                                        </div>
+                                        <div class="first_space d-flex flex-wrap justify-content-between">
+                                            <div class="first_card ms-3">1 x card (annual fees) <span id="uk_fr"></span><span id="custom_cart"></span></div> 
+                                            <div>29.90 &euro; </div>
+                                        </div>                                        
+                                        <div id="price_demo"></div>
+                                        <div id="demo3"></div>                                        
+                                        <div class="ms-3" id="sponsorship"></div>                                        
+                                    </div>
+                                    <div class="couponbox m-3 mt-3 p-2 d-lg-flex justify-content-lg-between">
+                                        <div class="coupon d-flex align-items-center d-lg-flex flex-md-column align-items-lg-start">
+                                            <div class="text-uppercase">coupon</div> 
+                                            <div class="opt ms-1 ms-lg-0 ">(optional)</div>
+                                        </div>
+                                        <div class="mb-2">
+                                            <input type="text" class="couponText form-control form-control-sm" id="" placeholder="Write the coupon code here ...">
+                                        </div> 
+                                        <button type="button" id="validateBtn" class="btn btn-lg btn-primary mb-4 mt-2 text-uppercase mt-md-0 mb-md-2" disabled>Validate</button> 
+                                    </div>
+                                    <div class="blue1 total px-5 py-2 rounded-bottom d-flex flex-wrap justify-content-between mb-md-0">
+                                        <div class="">TOTAL ></div>
+                                        <div class="totalPrice text-warning">39.90 &euro;</div>                
+                                    </div>                                                                                                                                                                                                                                          
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="col-12 border_left col-md-6 col-lg-5">
+                        <div class="title2 text-center text-secondary m-1 text-md-start ms-md-4 text-uppercase d-md-block d-none">payment mode<div class="text-dark">&mdash;</div></div>
+                        <div class="title text-center text-secondary m-3 text-md-start ms-md-4 d-md-none">Select your payment method<div class="text-dark d-none">&mdash;</div></div>
+                        <div class="">
+                            <div class="col-12 d-flex flex-wrap justify-content-center justify-content-lg-start ms-lg-4">
+                                <div class="box col-5 m-2 p-3 p-md-2 col-lg-3">
+                                    <div class="d-flex justify-content-center my-2"><img class="img_card" src="images/visa-card.png" alt="" width="80%"></div>
+                                    <button type="button" class="boxBtn btn col-12 btn-primary p-0">VISA Card</button> 
+                                    <div class="d-flex justify-content-between align-items-center mt-1"> 
+                                        <div class="sp100">100% Secure Payment</div>
+                                        <div class="ssl_width"><img class="float-end" src="images/ssl-order-card-pill.png" alt="" width="60%"></div>
+                                    </div>
+                                </div>
+                                <div class="box col-5 m-2 p-3 p-md-2 col-lg-3">
+                                    <div class="d-flex justify-content-center my-2"><img class="img_card" src="images/master-american-dinners-card.png" alt="" width="80%"></div>
+                                    <button type="button" class="boxBtn btn col-12 btn-primary p-0">Masterard</button> 
+                                    <div class="d-flex justify-content-between align-items-center mt-1"> 
+                                        <div class="sp100">100% Secure Payment</div>
+                                        <div class="ssl_width"><img class="float-end" src="images/ssl-order-card-pill.png" alt="" width="60%"></div>
+                                    </div>
+                                </div>
+                                <div class="box col-5 m-2 p-3 opacity p-md-2 col-lg-3">
+                                    <div class="d-flex justify-content-center my-2"><img class="img_card" src="images/paypal-card.png" alt="" width="80%"></div>
+                                    <button type="button" class="boxBtn btn col-12 btn-primary p-0">Paypal</button> 
+                                    <div class="d-flex justify-content-between align-items-center mt-1"> 
+                                        <div class="sp100">100% Secure Payment</div>
+                                        <div class="ssl_width"><img class="float-end" src="images/ssl-order-card-pill.png" alt="" width="60%"></div>
+                                    </div>
+                                </div>
+                                <div class="box col-5 m-2 p-3 p-md-2 col-lg-3">
+                                    <div class="d-flex justify-content-center my-3 my-lg-1"><img class="img_card_neosurf" src="images/neosurf-coupons.png" alt="" width="65%"></div>
+                                    <button type="button" class="boxBtn btn col-12 btn-primary p-0">Neosurf</button> 
+                                    <div class="d-flex justify-content-between align-items-center mt-1"> 
+                                        <div class="sp100">100% Secure Payment</div>
+                                        <div class="ssl_width"><img class="float-end" src="images/ssl-order-card-pill.png" alt="" width="60%"></div>
+                                    </div>
+                                </div>
+                                <div class="box col-5 m-2 p-3 p-md-2 col-lg-3">
+                                    <div class="d-flex justify-content-center my-3 my-lg-2"><img src="images/poste.png" alt="" width="70%"></div>
+                                    <button type="button" class="boxBtn btn col-12 btn-primary p-0">Mandat (MVC)</button> 
+                                </div>
+                                <div class="box col-5 m-2 px-3 py-2 p-md-2 col-lg-3">
+                                    <div class="d-flex justify-content-center my-3 "><img src="images/virement.png" class="img_transfer my-4 my-lg-2" alt="" width="60%"></div>
+                                    <button type="button" class="boxBtn btn col-12 btn-primary p-0">Transfer</button> 
+                                </div>
+                                <div class="box col-5 m-2 p-3 opacity p-md-2 col-lg-3">
+                                    <div class="d-flex justify-content-center my-3 my-lg-0"><img src="images/bitcoin.png" alt="" class="img_bitcoin my-4" width="60%"></div>
+                                    <button type="button" class="boxBtn btn col-12 btn-primary p-0">Bitcoin</button> 
+                                    <div class="d-flex justify-content-between align-items-center mt-1"> 
+                                        <div class="sp100">100% Secure Payment</div>
+                                        <div class="ssl_width"><img class="float-end" src="images/ssl-order-card-pill.png" alt="" width="60%"></div>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class=" d-flex justify-content-start align-items-center ms-4 my-2 px-2 "> 
+                                <div class=""><img src="images/ssl-order-card.png"  alt="" width="40%"> </div>
+                                <div class="text-uppercase spo_ssl fw-bold">Secure Payment Option - SSL</div>
+                            </div>        
+                        </div>
+                    </div>
+                </div>
+                <div class="fs-5 clearfix mb-3 mt-3 me-2 col-md-12">
+                    <a href="#"><button type="button" onclick="previous_3()" class="btn float-start">< PREVIOUS</button></a>
+                </div>    
+            </div>
+        </main>
+    </section>
+
+
+    <footer class="text-center">
+        <div class="sub_footer footerSize py-2 px-0 fs-4 fw-bold text-white d-lg-flex flex-wrap justify-content-center align-items-center p-lg-2">
+            <div class="m-auto d-flex flex-wrap justify-content-center align-items-center me-lg-3 m-lg-0">
+                <div class="lion col-1 me-2"><img src="images/lion.png" alt="lion_img" width="100%"></div>
+                <span> 730,804 <span class="sub_words bg-white fw-normal" >subscribers trust us. </span></span>
+            </div>
+            <div class="footerSize d-md-flex flex-wrap justify-content-center align-items-center">
+                <div class="footerSize fw-normal">At your service for &nbsp;</div>
+                <div class="footerSize fs-1">9<span class="footerSize2 fs-5 fw-normal"> YEARS</span><span class="and_footer fw-normal"> and</span><span > 274</span> <span class="footerSize2 fs-5 fw-normal"> Days.</span></div>    
+            </div>
+        </div>
+        <div class="text-center py-5 px-4 fs-5 mx-5 d-md-flex flex-wrap justify-content-center align-items-center footer_bottom m-lg-auto p-lg-0">
+            <div class="order-md-1 col-lg-8 text-lg-start ms-lg-5">
+                <div class="display-5 fw-bold AMEXSize"><span>AMEX</span> at your service</div>
+                <div>Customer Service in English at your service by<span><strong> phone </strong></span>form Monday to <span><strong> Saturday from 9h to 18h30</strong></span></div>    
+            </div>
+            <div class="phone-girl col-12 mt-4 order-md-0 mt-md-0 mb-md-4 mb-lg-3"><img src="images/trust-us.png" alt="phone-girl" width="100%"></div> 
+        </div>
+    </footer>
+</body>
+</html>
